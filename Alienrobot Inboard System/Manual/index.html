@@ -704,7 +704,7 @@
 <img alt="AC배전반내부" src="../img/AC배전반내부.jpg" width="48%" /></p>
 <h3 id="alien-ac-db-power-cable-connectionss">ALIEN AC D/B Power Cable connectionss<a class="headerlink" href="#alien-ac-db-power-cable-connectionss" title="Permanent link"></a></h3>
 <p>위 그림과 같이 배전반 뚜껑을 개봉하고, 고전압 케이블을 반드시 정확한 위치에 연결하십시오. AC 릴레이 배선의 경우, AC Line(A2(L,N))과 코일(Y1(3,4))에 유의하여 연결하십시오.
-케이블들을 <a href="#Cable-connections">Cable connections</a> 페이지에 기술된 것과 동일하게 연결하였다면, <a href="#ALIEN-ECU">ECU</a> 는 AC배전반 내부의 릴레이를 조작하여 <a href="#ALIEN-Battery-packG">배터리</a>를 과충전으로부터 보호합니다. 또한, <a href="#ALIEN-AC-Distribution-Board-A">AC 배전반</a>은 누전차단기와 퓨즈를 보호회로로 포함하고 있습니다. AC 배전반 내부의 누전차단기와 퓨즈의 상태를 상시 점검하십시오. </p>
+케이블들을 <a href="#cable-connections">Cable connections</a> 페이지에 기술된 것과 동일하게 연결하였다면, <a href="#alien-ecu">ECU</a> 는 AC배전반 내부의 릴레이를 조작하여 <a href="#ALIEN-Battery-packG">배터리</a>를 과충전으로부터 보호합니다. 또한, <a href="#alien-ac-distribution-board-a">AC 배전반</a>은 누전차단기와 퓨즈를 보호회로로 포함하고 있습니다. AC 배전반 내부의 누전차단기와 퓨즈의 상태를 상시 점검하십시오. </p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>누전차단기를 조작할 때에는, 안전을 위해서 AC 플러그를 제거한 상태에서 조작할 것을 권고합니다. 퓨즈나 누전차단기의 이상이 발생하는 원인은 다음과 같습니다.
@@ -1300,8 +1300,8 @@
 <p>쓰로틀의 자체의 결함으로 인한 문제는 ALIEN ECU에서 검출 불가능 합니다. 또한, 쓰로틀에서 발생하는 전기적 쇼트나 역극성이 발생하는 경우, ALIEN ECU에 심각한 전기적 손상을 야기할 수 있습니다. 쓰로틀의 결함이 없는지 가능한 자주 점검하십시오. </p>
 <ul>
 <li>제조사 홈페이지 : <a href="http://www.livorsi.com">http://www.livorsi.com</a></li>
-<li>당사 제품과 연결 방법 : <a href="#ALIEN-ECU-L4-pin-descriptions">ALIEN ECU L4 pin descriptions</a> </li>
-<li>출고 시 기본 설정 값 : TH1_OUT, 혹은 TH2_OUT 핀에 +5V 인가 시, CAN통신으로 회전속도 지령값(<a href="#ALIEN-ECU-CANOPEN-Protocol">COB-ID=2002</a>을 3800RPM으로 인가합니다. 다음 수식을 참고하세요. :  Speed reference[RPM] = TH1_OUT[V] / 5 * 3800 </li>
+<li>당사 제품과 연결 방법 : <a href="#alien-ecu-L4-pin-descriptions">ALIEN ECU L4 pin descriptions</a> </li>
+<li>출고 시 기본 설정 값 : TH1_OUT, 혹은 TH2_OUT 핀에 +5V 인가 시, CAN통신으로 회전속도 지령값(<a href="#alien-ecu-CANOPEN-Protocol">COB-ID=2002</a>을 3800RPM으로 인가합니다. 다음 수식을 참고하세요. :  Speed reference[RPM] = TH1_OUT[V] / 5 * 3800 </li>
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -1310,7 +1310,7 @@
 <h2 id="low-voltagelv-battery-d">Low Voltage(LV) Battery (D)<a class="headerlink" href="#low-voltagelv-battery-d" title="Permanent link"></a></h2>
 <p>100Ah 이상의 용량을 가진 납축전지나 리튬 계열의 배터리를 사용을 권장합니다. 당사의 Inboard system 제어 전원은 모두 24V 배터리와 연결되어 있습니다. 안전한 사용을 위해서 24V 배터리에는 당사의 제품과 타사 제품을 혼용으로 사용하지 마십시오. 24V 배터리의 충전/방전 관리를 위한 별도의 시스템은 당사에서 제공하지 않습니다.</p>
 <ul>
-<li>당사 제품과 연결 방법 : <a href="#ALIEN-ECU-J2-pin-descriptions">ALIEN ECU J2 pin descriptions</a></li>
+<li>당사 제품과 연결 방법 : <a href="#alien-ecu-J2-pin-descriptions">ALIEN ECU J2 pin descriptions</a></li>
 <li>배터리 권장 사양<ul>
 <li>정격 전압 : 20V 이상,  28V 이하</li>
 <li>정격 출력 전류 : 5A 이상</li>
@@ -1323,27 +1323,27 @@
 <h2 id="charger-e">Charger (E)<a class="headerlink" href="#charger-e" title="Permanent link"></a></h2>
 <p><img alt="CHARGER" src="../img/Charger.png" width="60%" /></p>
 <ul>
-<li><a href="#Cable-connections">케이블 연결</a> 외, 추가적인 설정은 필요하지 않습니다.</li>
+<li><a href="#cable-connections">케이블 연결</a> 외, 추가적인 설정은 필요하지 않습니다.</li>
 <li>제조사 홈페이지 : <a href="http://www.tccharger.com">http://www.tccharger.com</a></li>
 <li>당사 제품과 연결 방법 :<ul>
-<li>T1 : <a href="#ALIEN-ECU-J3-pin-descriptions">ALIEN ECU J3 pin descriptions</a></li>
-<li>C1 : <a href="#ALIEN-DC-DB-Power-cable-descriptions">ALIEN DC D/B power Cable connectionss</a></li>
-<li>C2 : <a href="#ALIEN-AC-DB-A2-pin-descriptions">ALIEN AC D/B A2 pin descriptions </a></li>
+<li>T1 : <a href="#alien-ecu-J3-pin-descriptions">ALIEN ECU J3 pin descriptions</a></li>
+<li>C1 : <a href="#alien-dc-db-power-cable-descriptions">ALIEN DC D/B power Cable connectionss</a></li>
+<li>C2 : <a href="#alien-ac-db-a2-pin-descriptions">ALIEN AC D/B A2 pin descriptions </a></li>
 </ul>
 </li>
 </ul>
 <h2 id="motor-driveh-motori">Motor Drive(H) &amp; Motor(I)<a class="headerlink" href="#motor-driveh-motori" title="Permanent link"></a></h2>
 <p><img alt="POWERMASTER" src="../img/PowerMaster.png" width="60%" /></p>
 <ul>
-<li><a href="#Cable-connections">케이블 연결</a> 외, <a href="#ALIEN-ECU-CANOPEN-Protocol">추가적인 설정</a>이 필수적입니다.</li>
+<li><a href="#cable-connections">케이블 연결</a> 외, <a href="#alien-ecu-CANOPEN-Protocol">추가적인 설정</a>이 필수적입니다.</li>
 <li>제조사 홈페이지 : <a href="https://www.danfoss.com">https://www.danfoss.com</a></li>
 <li>당사 제품과 연결 방법 :<ul>
-<li>X1 : <a href="#ALIEN-ECU-L1--L2-pin-descriptions">ALIEN ECU L1 &amp; L2 pin descriptions</a></li>
+<li>X1 : <a href="#alien-ecu-L1--L2-pin-descriptions">ALIEN ECU L1 &amp; L2 pin descriptions</a></li>
 </ul>
 </li>
 </ul>
 <h1 id="operating-manual">Operating Manual<a class="headerlink" href="#operating-manual" title="Permanent link"></a></h1>
-<p>당사 제품의 구동 방법을 상세하게 설명합니다. 본 장의 지침을 따라서 운전하기 전에 <a href="#Product-Descriptions">Product Description</a>과 <a href="#Third-party-products">Third-party products</a>에 기술된 모든 제품들이 <a href="#Cable-connections">Cable connections</a>에 기술된 바와 같이 올바르게 연결되었는지 반드시 확인하여 주십시오. </p>
+<p>당사 제품의 구동 방법을 상세하게 설명합니다. 본 장의 지침을 따라서 운전하기 전에 <a href="#product-descriptions">Product Description</a>과 <a href="#third-party-products">Third-party products</a>에 기술된 모든 제품들이 <a href="#cable-connections">Cable connections</a>에 기술된 바와 같이 올바르게 연결되었는지 반드시 확인하여 주십시오. </p>
 <h2 id="caution">Caution<a class="headerlink" href="#caution" title="Permanent link"></a></h2>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -1542,7 +1542,7 @@ Step 3. 쓰로틀 속도조절 레버를 전진 방향, 혹은 후진 방향으�
 <ul>
 <li>기본 제공되는 통신 옵션은 RS-232 방식입니다. 다른 방식을 원하시는 경우에는 당사에 문의하십시오.</li>
 <li>ALIEN ECU는 “모니터링”과 독자적으로 충전과 방전이 가능합니다. 즉, 모니터링 장치의 소프트웨어적인 결함이 발생하더라도 충전과 방전에는 영향이 없으므로 전체 시스템이 안전하게 보호<sup>1</sup> 됩니다.</li>
-<li>기본 제공되는 그래픽 유저 인터페이스(GUI)는 테이블 형태로 출력됩니다. 아래의 RS-232 규격을 참고하여 모니터링 장치를 <a href="#ALIEN-ECU-J4-pin-descriptions">Alien-ECU의 J4 커넥터</a> 에 연결하십시오.<ul>
+<li>기본 제공되는 그래픽 유저 인터페이스(GUI)는 테이블 형태로 출력됩니다. 아래의 RS-232 규격을 참고하여 모니터링 장치를 <a href="#alien-ecu-J4-pin-descriptions">Alien-ECU의 J4 커넥터</a> 에 연결하십시오.<ul>
 <li>1 start bit</li>
 <li>1 stop bit</li>
 <li>8 data bit</li>
@@ -1552,15 +1552,15 @@ Step 3. 쓰로틀 속도조절 레버를 전진 방향, 혹은 후진 방향으�
 </ul>
 </li>
 </ul>
-<p>당사에서 제공하는 <a href="#ALIEN-ECU-Graphical-User-InterfaceGUI">유저 인터페이스</a>를 사용하여 기본적인 설정 및 모니터링이 가능합니다. 혹은, <a href="#ALIEN-ECU-RS-232-Protocol">RS-232 protocol</a>을 사용하여 사용자가 직접 어플리케이션을 작성<sup>2</sup> 할 수 있습니다.</p>
+<p>당사에서 제공하는 <a href="#alien-ecu-Graphical-User-InterfaceGUI">유저 인터페이스</a>를 사용하여 기본적인 설정 및 모니터링이 가능합니다. 혹은, <a href="#alien-ecu-RS-232-Protocol">RS-232 protocol</a>을 사용하여 사용자가 직접 어플리케이션을 작성<sup>2</sup> 할 수 있습니다.</p>
 <p><sub>1 RS-232 표준 규격을 벗어난 전기적 쇼크나 노이즈가 인가되지 않는 경우만을 고려합니다.</sub></p>
 <p><sub>2 본 기술서에 있는 내용은 단순 참고용입니다. 독자적인 어플리케이션을 작성을 위한 방법이나 기술 지원이 필요하시다면 당사에 문의하여 주십시오. 통신 방식은 변경이 가능합니다. </sub></p>
 <h2 id="alien-ecu-rs-232-protocol">ALIEN ECU RS-232 Protocol<a class="headerlink" href="#alien-ecu-rs-232-protocol" title="Permanent link"></a></h2>
 <p>ALIEN ECU의 RS-232 통신 포맷은 외부 장치로부터 ECU에 모니터링할 데이터의 요청 포맷과 요청에 대한 ECU의 응답 포맷으로 나뉘어집니다. 
-모니터링 장치가 ECU에 모니터링 하고자하는 데이터의 <a href="#ALIEN-ECU-RS-232-ID-LISTS">ID LIST</a>의 <a href="#Data-request-packet">요청 패킷</a> 전송하면, ECU는 요청받은 ID들의 데이터들을 <a href="#Data-response-packet">응답 패킷</a>을 전송합니다.</p>
+모니터링 장치가 ECU에 모니터링 하고자하는 데이터의 <a href="#alien-ecu-rs-232-id-lists">ID LIST</a>의 <a href="#data-request-packet">요청 패킷</a> 전송하면, ECU는 요청받은 ID들의 데이터들을 <a href="#data-response-packet">응답 패킷</a>을 전송합니다.</p>
 <div class="admonition warning 통신 요청 주기">
 <p class="admonition-title">Warning</p>
-<p><a href="#Data-request-packet">요청 패킷</a>의 안정적인 전송 주기(period)는 <strong>0.2초 이상</strong>입니다. 이보다 빠른 속도로 전송을 요청하시는 경우, 통신이 불안정해 질 수 있으니 주의하십시오.</p>
+<p><a href="#data-request-packet">요청 패킷</a>의 안정적인 전송 주기(period)는 <strong>0.2초 이상</strong>입니다. 이보다 빠른 속도로 전송을 요청하시는 경우, 통신이 불안정해 질 수 있으니 주의하십시오.</p>
 </div>
 <h3 id="data-request-packet">Data request packet<a class="headerlink" href="#data-request-packet" title="Permanent link"></a></h3>
 <p>각 ID는 8비트이며, 필요한 ID 리스트를 순차적으로 전송합니다.</p>
@@ -2037,7 +2037,7 @@ Step 3. 쓰로틀 속도조절 레버를 전진 방향, 혹은 후진 방향으�
 <hr />
 <ol>
 <li id="fn:1">
-<p>세부 내용은 <a href="#ALIEN-ECU-Error-code">오류코드</a>를 참고하세요.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>세부 내용은 <a href="#alien-ecu-Error-code">오류코드</a>를 참고하세요.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
